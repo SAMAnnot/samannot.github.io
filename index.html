@@ -1,106 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>SAMAnnot: An Efficient Video Annotation Tool</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="SAMAnnot is a video annotation tool built on Segment Anything (SAM2). It enables high-granularity segmentation-mask generation with minimal user interaction, making detailed video labeling faster and more efficient."
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>SAMAnnot</h1>
-      <p>A Segment Anything based video annotation tool.</p>
-      <p>For efficient keyframe annotation and data propagation.</p>
-      <div class="buttons">
-        <a
-          class="btn btn-primary"
-          href="https://github.com/gergelydinya/SAMAnnot"
-          target="_blank"
-          rel="noopener noreferrer"
-          >View on GitHub</a
-        >
-        <a
-          class="btn btn-outline"
-          href="https://github.com/gergelydinya/SAMAnnot#readme"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Documentation</a
-        >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="SAMAnnot is a video annotation tool built on Segment Anything (SAM2). It enables high-granularity segmentation-mask generation with minimal user interaction, making detailed video labeling faster and more efficient." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SAMAnnot: An Efficient Video Annotation Tool</title>
+
+  <!-- VGG-T style: Bulma + fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Keep your original stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Minimal layout polish, similar spirit to VGG-T */
+    .publication-title {
+      font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    .section-tight {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .content-max {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    pre code {
+      display: block;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO (centered like VGG-T) -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-3 publication-title">SAMAnnot</h1>
+            <p class="subtitle is-5">A Segment Anything based video annotation tool.</p>
+            <p class="subtitle is-6">For efficient keyframe annotation and data propagation.</p>
+
+            <div class="buttons is-centered">
+              <a class="button is-dark is-rounded" href="https://github.com/gergelydinya/SAMAnnot" target="_blank"
+                rel="noopener noreferrer">
+                View on GitHub
+              </a>
+              <a class="button is-dark is-rounded is-outlined" href="https://github.com/gergelydinya/SAMAnnot#readme"
+                target="_blank" rel="noopener noreferrer">
+                Documentation
+              </a>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          <strong>SAMAnnot</strong> is a versitile video annotation tool built on top of Meta's Segment Anything Model (<a
-            href="https://github.com/facebookresearch/sam2"
-            target="_blank"
-            rel="noopener noreferrer"
-            >SAM2</a
-          >). It helps you create high-quality segmentation masks across video frames with minimal user interaction.
-        </p>
-      </section>
+  <!-- MAIN CONTENT (max width + consistent section styling) -->
+  <section class="section section-tight">
+    <div class="container is-max-desktop">
+      <div class="content content-max">
 
-      <section id="features">
-        <h2>Features</h2>
-        <ul>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-        </ul>
-      </section>
+        <section id="about" class="section section-tight">
+          <h2 class="title is-4" style="font-weight: 700;">About</h2>
+          <div class="content has-text-justified">
+            <p>
+              <strong>SAMAnnot</strong> is a versitile video annotation tool built on top of Meta's Segment Anything
+              Model (<a href="https://github.com/facebookresearch/sam2" target="_blank" rel="noopener noreferrer">SAM2</a>).
+              It helps you create high-quality segmentation masks across video frames with minimal user interaction.
+            </p>
+          </div>
+        </section>
 
-      <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>
-          For full details, see the
-          <a
-            href="https://github.com/gergelydinya/SAMAnnot"
-            target="_blank"
-            rel="noopener noreferrer"
-            >SAMAnnot</a
-          > repository. A minimal example workflow is shown below.
-        </p>
+        <section id="features" class="section section-tight">
+          <h2 class="title is-4" style="font-weight: 700;">Features</h2>
+          <div class="content">
+            <ul>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+            </ul>
+          </div>
+        </section>
 
-        <h3>Clone the repository</h3>
-        <pre><code>git clone https://github.com/gergelydinya/SAMAnnot.git
+        <section id="getting-started" class="section section-tight">
+          <h2 class="title is-4" style="font-weight: 700;">Getting Started</h2>
+          <div class="content has-text-justified">
+            <p>
+              For full details, see the
+              <a href="https://github.com/gergelydinya/SAMAnnot" target="_blank" rel="noopener noreferrer">SAMAnnot</a>
+              repository. A minimal example workflow is shown below.
+            </p>
+          </div>
+
+          <div class="content">
+            <h3 class="title is-5">Clone the repository</h3>
+            <pre><code>git clone https://github.com/gergelydinya/SAMAnnot.git
 cd SAMAnnot</code></pre>
 
-        <h3>Installation (Linux)</h3>
-        <pre><code>pip install -r requirements.txt
+            <h3 class="title is-5">Installation (Linux)</h3>
+            <pre><code>pip install -r requirements.txt
 ...</code></pre>
 
-        <h3>Run the tool</h3>
-        <pre><code>python main.py</code></pre>
-      </section>
+            <h3 class="title is-5">Run the tool</h3>
+            <pre><code>python main.py</code></pre>
+          </div>
+        </section>
 
-      <section id="user-guide">
-        <h2>User guide</h2>
-        <ol>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-        </ol>
-      </section>
-    </main>
+        <section id="user-guide" class="section section-tight">
+          <h2 class="title is-4" style="font-weight: 700;">User guide</h2>
+          <div class="content">
+            <ol>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+            </ol>
+          </div>
+        </section>
 
-    <footer>
-      <p>
-        Project repository:
-        <a
-          href="https://github.com/gergelydinya/SAMAnnot"
-          target="_blank"
-          rel="noopener noreferrer"
-          >github.com/gergelydinya/SAMAnnot</a
-        >
-      </p>
-    </footer>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (VGG-T-like centered container) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Project repository:
+              <a href="https://github.com/gergelydinya/SAMAnnot" target="_blank" rel="noopener noreferrer">
+                github.com/gergelydinya/SAMAnnot
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
