@@ -119,7 +119,10 @@
           <div class="content">
             <h3 class="title is-5">Clone the repository</h3>
             <pre><code>git clone https://github.com/gergelydinya/SAMAnnot.git
-cd SAMAnnot</code></pre>
+cd SAMAnnot
+conda create -n samannot python=3.10 -y
+conda activate samannot
+            </code></pre>
 
             <h3 class="title is-5">Installation (Linux)</h3>
             <pre><code>pip install -r requirements.txt
@@ -132,7 +135,9 @@ cd ../checkpoints
             </code></pre>
 
             <h3 class="title is-5">Run the tool</h3>
-            <pre><code>python main.py</code></pre>
+            <pre><code> conda activate 
+python main.py
+            </code></pre>
           </div>
         </section>
 
