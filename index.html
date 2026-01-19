@@ -1,69 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description"
-    content="SAMannot is a video annotation tool built on Segment Anything (SAM2). It enables high-granularity segmentation-mask generation with minimal user interaction, making detailed video labeling faster and more efficient." />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>SAMannot: An Efficient Video Annotation Tool</title>
-  
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <meta name="description" content="SAMannot is an open-source, memory-efficient video annotation tool built on SAM2 for interactive video instance segmentation with fast keyframe labeling and mask propagation." />
+
+  <link rel="canonical" href="https://samannot.github.io/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Social preview (no og:image to avoid pointing to missing assets) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAMannot" />
+  <meta property="og:description" content="SAM2-based interactive video instance segmentation for efficient keyframe annotation and propagation." />
+  <meta property="og:url" content="https://samannot.github.io/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Castoro&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Keep your original stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <style>
-  .publication-title {
-    font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    font-weight: 700;
-  }
+	<style>
+	  .publication-title {
+		font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+		font-weight: 700;
+	  }
 
-  .section-tight {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
+	  .section-tight {
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+	  }
 
-  .content-max {
-    max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	  .content-max {
+		max-width: 860px;
+		margin-left: auto;
+		margin-right: auto;
+	  }
 
-  pre {
-    background: #f5f5f5 !important;
-    color: #111 !important;
-    border: 1px solid #e5e5e5;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
+	  pre {
+		background: #f5f5f5 !important;
+		color: #111 !important;
+		border: 1px solid #e5e5e5;
+		padding: 1rem;
+		border-radius: 8px;
+		overflow-x: auto;
+	  }
 
-  pre code {
-    background: transparent !important;
-    color: inherit !important;
-  }
-    
-  #paper-info pre {
-    background: #f5f5f5 !important;
-    color: #111 !important;
-    border: 1px solid #e5e5e5;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
+	  pre code {
+		background: transparent !important;
+		color: inherit !important;
+	  }
+		
+	  #paper-info pre {
+		background: #f5f5f5 !important;
+		color: #111 !important;
+		border: 1px solid #e5e5e5;
+		padding: 1rem;
+		border-radius: 8px;
+		overflow-x: auto;
+	  }
 
-  #paper-info pre code {
-    background: transparent !important;
-    color: inherit !important;
-  }
-</style>
+	  #paper-info pre code {
+		background: transparent !important;
+		color: inherit !important;
+	  }
+	</style>
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareSourceCode",
+    "name":"SAMannot",
+    "description":"A memory-efficient, local, open-source framework for interactive video instance segmentation based on SAM2.",
+    "url":"https://samannot.github.io/",
+    "codeRepository":"https://github.com/gergelydinya/SAMannot",
+    "license":"https://github.com/gergelydinya/SAMannot/blob/main/LICENSE",
+    "programmingLanguage":["Python"],
+    "citation":{
+      "@type":"ScholarlyArticle",
+      "name":"SAMannot: A Memory-Efficient, Local, Open-source Framework for Interactive Video Instance Segmentation based on SAM2",
+      "url":"https://arxiv.org/abs/2601.11301"
+    }
+  }
+  </script>
 </head>
-
 <body>
 
   <!-- HERO (centered like VGG-T) -->
